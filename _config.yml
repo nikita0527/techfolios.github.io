@@ -1,0 +1,7 @@
+name: Your New Jekyll Site
+markdown: redcarpet
+highlighter: pygments
+url: http://techfolios.github.io
+gems:
+  - jekyll-gist
+baseurl:
