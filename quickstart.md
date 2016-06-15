@@ -69,7 +69,7 @@ Go to the bottom of the page and click "Commit changes" to save these changes.
 
 Note how the url in this screen image includes a personal GitHub account name.
 
-# 3. Configure home page
+# 3. Set home page content
 
 It's all well and good to have your own portfolio site, but unless you actually happen to be Molly Maluhia, the next step is to replace the template content with your own.  Let's start with the home page.  Here's an 11 minute video illustrating the following steps:
 
@@ -95,7 +95,9 @@ Now refresh your profile page to see your home page, and continue editing bio.js
 
 # 4. Set home page theme
 
-Now that your home page content is OK, it's time to explore TechFolio "themes".  
+Now that your home page content is OK, it's possible to explore TechFolio "themes". (If you're content with the current theme, you can skip this section for now.) Here's a three minute video illustrated the steps below:
+
+{% include youtube.html id="us00EnBKUYc" %}
 
 The layout for each of the top-level pages in a TechFolio site (home, projects, essays, bio) is specified in `_config.yml'.  The TechFolio template comes with a few alternative themes for each top-level page that you can try out now.  As you get more experienced with the system, you will find that you can easily create your own variants of these themes to give your site a unique look and feel.
  
@@ -124,15 +126,71 @@ theme-bio: theme-bio-builtin-1.html
 
 Note that you simply provide the file name for the theme of interest, and that you need to "match" the theme type. So, for example, the `theme-home:` keyword can take any file whose name starts with "theme-home" (such as theme-home-builtin-1 or theme-home-builtin-2) but the site will not build correctly if you specify a file not associated with a home theme (such as theme-projects-builtin-1). 
 
+Here is an example of the home page after setting the home page to the third builtin theme:
+
+<img style="" src="images/techfolio-pj-home-page-3.png" class="img-responsive">
+
+# 5. Set project content
+
+An important part of any technology portfolio are descriptions of significant projects you've developed or played a significant role in. 
+
+In TechFolios, use the projects/ directory to hold a file for each of your projects.  The template comes with three sample projects in the projects/ directory named project-1.md, project-2.md, and project-3.md.  Here is the template projects top-level page, which provides a summary of all your projects:
+
+<img style="" src="images/techfolio-site-projects.png" class="img-responsive">
+
+Clicking on the "Read More" link associated with a project takes you to its "details" page. Here's an example:
+
+<img style="" src="images/techfolio-project-details.png" class="img-responsive">
+
+Here's the contents of the project-1.md file used to generate both the project summary and project details:
+
+```markdown
+---
+layout: project
+type: project
+published: true
+image: images/micromouse.jpg
+title: Micromouse
+permalink: projects/micromouse
+date: 2015
+labels:
+  - Robotics
+  - Arduino
+  - C++
+summary: My team developed a robotic mouse that won first place in the 2015 UH Micromouse competition.
+---
+
+<img class="ui medium right floated rounded image" src="{{ site.baseurl }}/images/micromouse-robot.png">
+
+Micromouse is an event where small robot “mice” solve a 16 x 16 maze.  Events are held worldwide.  The maze is made up of a 16 by 16 grid of cells, each 180 mm square with walls 50 mm high.  The mice are completely autonomous robots that must find their way from a predetermined starting position to the central area of the maze unaided.  The mouse will need to keep track of where it is, discover walls as it explores, map out the maze and detect when it has reached the center.  having reached the center, the mouse will typically perform additional searches of the maze until it has found the most optimal route from the start to the center.  Once the most optimal route has been determined, the mouse will run that route in the shortest possible time.
+
+For this project, I was the lead programmer who was responsible for programming the various capabilities of the mouse.  I started by programming the basics, such as sensor polling and motor actuation using interrupts.  From there, I then programmed the basic PD controls for the motors of the mouse.  The PD control the drive so that the mouse would stay centered while traversing the maze and keep the mouse driving straight.  I also programmed basic algorithms used to solve the maze such as a right wall hugger and a left wall hugger algorithm.  From there I worked on a flood-fill algorithm to help the mouse track where it is in the maze, and to map the route it takes.  We finished with the fastest mouse who finished the maze within our college.
+
+You can learn more at the [UH Micromouse Website](http://www-ee.eng.hawaii.edu/~mmouse/about.html).
+```
+
+First, note the file contents begin with [Jekyll front matter](https://jekyllrb.com/docs/frontmatter/), which is enclosed between three dashes.  The Jekyll front matter provides all of the information needed to generate the project summary: the project name, summary text, labels, the image file, the date, and the permalink (which becomes the URL to the detailed description). 
+
+Second, note that your project file names should end with ".md".  This indicates to the system that the contents of the file are in [GitHub flavored markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/). For the most part, the template files provide examples of the required syntax and you might not even need to refer to the documentation.
+
+Third, you must provide a square image of at least 300px on a side for each project. We recommend you upload those project images to the images/ directory, just like you uploaded your home page image. The template system provides examples.
+  
+Fourth, Techfolio generates the set of projects by processing every \*.md file in your site that has `type: project` in its front matter. (By convention, store all of those files in the projects/ directory.) 
+
+Fifth, as illustrated above, each project summary contains a link to a page with more details about the project. TechFolio provides you with two options for project details. 
+
+  1. *Provide details in the \*.md file.* You can provide the detailed description of a project directly in the \*.md file as text below the front matter section.  This is illustrated above.
+    
+  2. *Provide details via a link to the project's home page.*  Some projects might have their own home page, such as a GitHub repo, which is the authoritative source for project details.  In this case, it might be most appropriate for your project summary to link directly to that home page rather than you writing a redundant description in the \*.md file.  To support this, you can provide a field called `projecturl:` in the front matter of the \*.md file whose value is the URL to the external site.  If this field is present, it is used as the link on the project summary page. See the video for examples of this approach. 
+    
+ 
+ 
+
 
 <!--
-# 5. Configure projects page
+# 5. Set essay content
 
-
-
-# 5. Configure essays page
-
-# 6. Configure bio page
+# 6. Set bio content
 
 <p style="text-align: center; padding-top: 10px">
   <a href="/userguide.html" class="btn btn-primary btn-md" role="button">Go to User Guide <span class="glyphicon glyphicon-chevron-right"></span> </a>
