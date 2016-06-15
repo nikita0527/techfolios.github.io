@@ -77,6 +77,13 @@ Here's a two minute video illustrating these steps:
   <a href="/userguide.html" class="btn btn-primary btn-md" role="button">Go to User Guide <span class="glyphicon glyphicon-chevron-right"></span> </a>
 </p>
 
+# 4. Configure projects page
+
+# 5. Configure essays page
+
+# 6. Configure resume page
+
+
 
 
 
