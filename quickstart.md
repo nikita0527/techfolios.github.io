@@ -13,7 +13,7 @@ Before proceeding, [login](http://github.com/login) to your GitHub account.
 
 # 2. Configure template
 
-In this step, you'll make a personal copy of the TechFolio template and configure it to be displayed as your portfolio. Here's a three minute video illustrating the steps:
+In this step, you'll make a personal copy of the TechFolio template and configure it to be displayed as your portfolio. Here's a 3 minute video illustrating the following steps:
 
 {% include youtube.html id="KGrNQSZVcEc" %}
  
@@ -71,7 +71,9 @@ Note how the url in this screen image includes a personal GitHub account name.
 
 # 3. Configure home page
 
-It's all well and good to have your own portfolio site, but unless you actually happen to be Molly Maluhia, the next step is to replace the template content with your own.  Let's start with the home page.  
+It's all well and good to have your own portfolio site, but unless you actually happen to be Molly Maluhia, the next step is to replace the template content with your own.  Let's start with the home page.  Here's an 11 minute video illustrating the following steps:
+
+{% include youtube.html id="kRNT7KYofGk" %}
 
 **A.** First, obtain an image for display.  The requirements for this image are that it is **square** and at least 300px per side. On a Mac, you can [crop an image using Preview](http://osxdaily.com/2014/06/16/crop-image-mac-preview/). (Hold down the shift key while selecting the cropped area to force a square.)  On Windows, you can [crop an image using Photo Gallery](http://windows.microsoft.com/en-us/windows-live/photo-gallery-edit-photos-faq). On Unix, you can [crop an image using Gimp](https://docs.gimp.org/en/gimp-tutorial-quickie-crop.html). 
 
@@ -87,14 +89,50 @@ For the 'interests' section, you can include keywords for each interest or leave
 
 Once you've finished your edits, click "Commit changes" at the bottom of the page to save.
  
-Now refresh your profile page to see your home page, and continue editing bio.json, commiting the changes, and refreshing the page until you are satisfied with the content.
+Now refresh your profile page to see your home page, and continue editing bio.json, commiting the changes, and refreshing the page until you are satisfied with the content.  Note that, as shown in the video, sometimes it can take a few seconds for your commits to be reflected in the page.  Here is an example of the home page after configuration in the above video:
+
+<img style="" src="images/techfolio-pj-home-page.png" class="img-responsive">
+
+# 4. Set home page theme
+
+Now that your home page content is OK, it's time to explore TechFolio "themes".  
+
+The layout for each of the top-level pages in a TechFolio site (home, projects, essays, bio) is specified in `_config.yml'.  The TechFolio template comes with a few alternative themes for each top-level page that you can try out now.  As you get more experienced with the system, you will find that you can easily create your own variants of these themes to give your site a unique look and feel.
+ 
+To determine the builtin themes, look in the `_includes` directory for all files whose name starts with "theme". You should see at least the following files:
+
+  * theme-bio.builtin-1.html
+  * theme-bio.builtin-2.html
+  * theme-essays-builtin-1.html
+  * theme-essays-builtin-2.html
+  * theme-home-builtin-1.html
+  * theme-home-builtin-2.html
+  * theme-home-builtin-3.html
+  * theme-projects-builtin-1.html
+  * theme-projects-builtin-2.html
+  
+These files (and any others you find) define the available builtin themes for each of the four top-level pages. To change the theme associated with any given page, just edit the following section of `_config.yml`:
+
+```yaml
+# You might want to change the theme associated with one or more sections of the site.
+# Defining your own custom theme variations is easy. See the documentation.
+theme-home: theme-home-builtin-1.html
+theme-projects: theme-projects-builtin-1.html
+theme-essays: theme-essays-builtin-1.html
+theme-bio: theme-bio-builtin-1.html
+```
+
+Note that you simply provide the file name for the theme of interest, and that you need to "match" the theme type. So, for example, the `theme-home:` keyword can take any file whose name starts with "theme-home" (such as theme-home-builtin-1 or theme-home-builtin-2) but the site will not build correctly if you specify a file not associated with a home theme (such as theme-projects-builtin-1). 
+
 
 <!--
-# 4. Configure projects page
+# 5. Configure projects page
+
+
 
 # 5. Configure essays page
 
-# 6. Configure resume page
+# 6. Configure bio page
 
 <p style="text-align: center; padding-top: 10px">
   <a href="/userguide.html" class="btn btn-primary btn-md" role="button">Go to User Guide <span class="glyphicon glyphicon-chevron-right"></span> </a>
