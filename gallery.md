@@ -14,7 +14,7 @@ title: Gallery
 <h2>Template</h2>
 <div class="row">
   <div class="col-sm-6">
-    <img src="images/techfolio-personal-template.png" class="img-responsive">
+    <img src="images/techfolio-molly-home-page.png" class="img-responsive">
   </div>
   <div class="col-sm-6">
    <p style="margin-top: 20px">
@@ -54,4 +54,3 @@ title: Gallery
 </div>
 </div>
 
-</div>
