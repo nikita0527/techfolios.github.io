@@ -13,7 +13,9 @@ Before proceeding, [login](http://github.com/login) to your GitHub account.
 
 # 2. Configure template
 
-In this step, you'll make a personal copy of the TechFolio template and configure it to be displayed as your portfolio.
+In this step, you'll make a personal copy of the TechFolio template and configure it to be displayed as your portfolio. Here's a three minute video illustrating the steps:
+
+{% include youtube.html id="KGrNQSZVcEc" %}
  
 **A.** Go to [https://github.com/techfolios/template](https://github.com/techfolios/template).
   
@@ -69,19 +71,36 @@ Note how the url in this screen image includes a personal GitHub account name.
 
 # 3. Configure home page
 
-Here's a two minute video illustrating these steps:
-{% include youtube.html id="DIbVvGHOhow" %}
+It's all well and good to have your own portfolio site, but unless you actually happen to be Molly Maluhia, the next step is to replace the template content with your own.  Let's start with the home page.  
 
+**A.** First, obtain an image for display.  The requirements for this image are that it is **square** and at least 300px per side. On a Mac, you can [crop an image using Preview](http://osxdaily.com/2014/06/16/crop-image-mac-preview/). (Hold down the shift key while selecting the cropped area to force a square.)  On Windows, you can [crop an image using Photo Gallery](http://windows.microsoft.com/en-us/windows-live/photo-gallery-edit-photos-faq). On Unix, you can [crop an image using Gimp](https://docs.gimp.org/en/gimp-tutorial-quickie-crop.html). 
 
-<p style="text-align: center; padding-top: 10px">
-  <a href="/userguide.html" class="btn btn-primary btn-md" role="button">Go to User Guide <span class="glyphicon glyphicon-chevron-right"></span> </a>
-</p>
+**B.** Upload this file to the images/ directory.  To do this, click on the "images" link to display that directory. Then press the "Upload files" button, and upload your image file to that directory.
 
+**C.** Edit the `basics`, `profiles`, and `interests` sections of your bio.json file. To do this, click on the "_data" link to display that directory, then click on "bio.json" to display that file. Click on the pencil icon to bring up a browser-based editor.  Edit those three sections with your own data.
+  
+For the `basics` section, when editing the picture field, be sure to delete the "template" part of the URL, otherwise the image won't be found. If you don't want your phone displayed on the site, you can make it the empty string. 
+ 
+For the `profiles` section, I recommend you include only your "professional" networking sites. For example, you might not want to include facebook if you use that only for personal networking.  You can specify any networking site for which there exists a [Semantic UI brand icon](http://semantic-ui.com/elements/icon.html#brands).
+
+For the 'interests' section, you can include keywords for each interest or leave that field empty.  On the home page, keywords associated with interests do not appear with the built-in templates, but they are used on the resume page.
+
+Once you've finished your edits, click "Commit changes" at the bottom of the page to save.
+ 
+Now refresh your profile page to see your home page, and continue editing bio.json, commiting the changes, and refreshing the page until you are satisfied with the content.
+
+<!--
 # 4. Configure projects page
 
 # 5. Configure essays page
 
 # 6. Configure resume page
+
+<p style="text-align: center; padding-top: 10px">
+  <a href="/userguide.html" class="btn btn-primary btn-md" role="button">Go to User Guide <span class="glyphicon glyphicon-chevron-right"></span> </a>
+</p>
+
+-->
 
 
 
