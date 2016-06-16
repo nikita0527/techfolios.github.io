@@ -277,16 +277,122 @@ Finally, you can configure the label used on the home page to link to the bio pa
 
 To set the bio content, we recommend you start with either the template bio.json file (if you are a student and want a resume format) or [Philip Johnson's bio.json file](https://raw.githubusercontent.com/philipmjohnson/philipmjohnson.github.io/master/_data/bio.json) if you want a CV-style presentation. The latter file adds fields to various sections in order to support the CV format. 
 
+It's probably not useful to watch a video of me editing a bio.  Instead, here are some tips:
+
+  * If you have a favorite editor, you might want to copy the bio.json file out of your browser and into your editor to edit. Try to maintain the indentation as a way of ensuring that the file continues to be structured appropriately.
+  
+  * Commit and test your changes to bio.json frequently.  That way, if you make an error with a section, you can easily revert to a recent version that works. (Use the GitHub "History" button to see all prior versions of a single file.)
+  
+  * The bio.json file should conform to the [JSON Resume Schema format](http://lbovet.github.io/docson/index.html#https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json), although the CV builtin format looks for some additional fields in order to differentiate between publication and award types.
+  
+  * If GitHub emails you that an error occurred when trying to generate the site after committing a new version of bio.json, try cutting and pasting your bio.json file into [YAML Lint](http://www.yamllint.com/).  In general, if the GitHub page generator fails, it's because something in file prevented it from converting the JSON into YAML. 
+   
+   * If all else fails, use the [Help Page](help.html) to request support. It will almost always be a very easy mistake to fix.
+
 Once your bio.json file is set up correctly, you may want to adjust the theme so that the page renders exactly how you want it.  That will be covered later as part of the User Guide.
 
-<!--
-# 8. Adjust background colors
+# 10. Adjust colors
+
+The template portfolio has a very neutral gray theme.  If you want to add some color to your portfolio without extensive changes to the themes, then the easiest approach is to modify the css/stylesheet-customizations.scss file. Whatever you put into this file will override the defaults without requiring you to modify built-in CSS. 
+
+The stylesheet-customizations.scss file provides hints for how to modify colors without actually doing so:
+
+```sass
+---
+# Provide front matter so Jekyll processes this file as SASS.
+---
+
+// Put your custom CSS here if you want to override the defaults.
+// Here are some common customizations for colors
+
+// Customize the background color
+body {
+  // background-color: #f2f2f2;;
+}
+
+// Customize the menubar color
+.ui.menu {
+  // background: $background-start;
+}
+
+// Customize the home page icon colors
+.icon-color {
+  // color: silver;
+}
+```
+
+Currently, it is not easy to create an attractive site using dark background colors. I recommend you stick to a light background color if you want to move away from the default gray. For example, here's a version of stylesheet-customizations.scss using a few shades of light blue:
+
+```sass
+---
+# Provide front matter so Jekyll processes this file as SASS.
+---
+
+// Put your custom CSS here if you want to override the defaults.
+// Here are some common customizations for colors
+
+// Customize the background color
+body {
+  background-color: lightsteelblue;
+}
+
+// Customize the menubar color
+.ui.menu {
+  background: lightskyblue;
+}
+
+// Customize the home page icon colors
+.icon-color {
+  color: darken(lightsteelblue, 20%);
+}
+```
+
+Here's what the home page looks like with this scheme:
+
+<img style="" src="images/techfolio-molly-blue.png" class="img-responsive">
+
+Notice that because this is SASS and not CSS, we can "darken" lightsteelblue by 20% to color the home page social network icons.
+ 
+Another way to add some interest is through the use of gradients.  Here's a version, also with blue:
+   
+```sass
+---
+# Provide front matter so Jekyll processes this file as SASS.
+---
+
+// Put your custom CSS here if you want to override the defaults.
+// Here are some common customizations for colors
+
+// Customize the background color
+body {
+  background: linear-gradient(to bottom right, lightskyblue, whitesmoke);
+}
+
+// Customize the menubar color
+.ui.menu {
+  background: lightskyblue;
+}
+
+// Customize the home page icon colors
+.icon-color {
+  color: darken(lightsteelblue, 20%);
+}
+```
+Here's the result:
+
+<img style="" src="images/techfolio-molly-gradient.png" class="img-responsive">
+
+If you stick to light colors and either a solid background or subtle gradient, you can add some personality to your portfolio without detracting from the content. 
+
+
+
+<hr>
 
 <p style="text-align: center; padding-top: 10px">
   <a href="/userguide.html" class="btn btn-primary btn-md" role="button">Go to User Guide <span class="glyphicon glyphicon-chevron-right"></span> </a>
 </p>
 
--->
+
 
 
 
