@@ -132,7 +132,7 @@ Here is an example of the home page after setting the home page to the third bui
 
 # 5. Set project content
 
-An important part of any technology portfolio are descriptions of significant projects you've developed or played a significant role in. Please skim the text in this section for an overview, then watch the following 8 minute video to see an example, then update your project descriptions, referring back to this documentation as necessary. 
+An important part of any technology portfolio are descriptions of significant projects you've developed or played a significant role in. Please skim the text in this section for an overview, then watch the following 8 minute video to see an example, then add some initial project descriptions, referring back to this documentation as necessary. 
 
 {% include youtube.html id="z5PbK0B1FlE" %}
 
@@ -196,7 +196,10 @@ Exactly similar to the home page, you can edit the `_config.yml` page to specify
 
 # 7. Set essay content
 
-Since TechFolio is built on Jekyll, it provides excellent infrastructure for "blogging". However, we will use the more professional term "technical essay". 
+Since TechFolio is built on Jekyll, it provides excellent infrastructure for "blogging". However, we will use the more professional term "technical essay". Please skim the text in this section for an overview, then watch the following 4 minute video to see an example, then add some initial essays, referring back to this documentation as necessary. 
+
+{% include youtube.html id="gkZNCR2cpy0" %}
+
 
 Essays are similar to projects in the following ways:
  
@@ -232,20 +235,48 @@ I never used to think that design and technology went hand in hand.  Thus, learn
 I am now starting to take a Software Engineering class. I hope to learn a lot through the course, but I know it will be just the beginning of my journey. By the time I’m done with it, I hope I’ve learned enough to take the next step in my life as a developer. But until then, my fire will keep on burning.
 
 ```
-    
+
+Here is an example of the essays page after the content was set as in the video above:
    
-
+<img style="" src="images/techfolio-pj-essay-summaries.png" class="img-responsive">  
    
-
-<!--
-
 # 8. Set essays page theme
 
 Exactly similar to the home and projects pages, you can edit the `_config.yml` page to specify the theme for the essays page.  If you like, spend a minute or two now to check out an alternative layout. 
 
+# 9. Set bio content
 
-# 8. Set bio content
+The last section of the site to personalize is the "bio" page.  The bio page renders the data in the `_data/bio.json` file which you partially customized at the beginning of this Quick Start in order to set the content for the Home Page.  In order for the bio page to render appropriately, it is now time for you to edit the remaining fields in this file. 
 
+TechFolio calls this a bio page because academic technologists provide biographical data in the form of a "CV", while industry-oriented technologists provide biographical data as a "Resume".  The distinction is deeper than just the term: the structure and content of a CV is actually quite different from that of a resume. 
+
+TechFolio tries to support the presentation of biographical data in either CV or Resume format through the use of themes.  The "theme-bio-builtin-1" theme creates a bio page that presents the data in bio.json in a style typical of a resume. The "theme-bio-builtin-2" also presents the data in bio.json, but this time in a style typical of a resume. *We expect that many users will want to create custom themes based on one of these two starting points in order to best present their biographical data.*
+
+A concrete example will help the differences in these two approaches clear.  Here is a sample bio.json file presented using theme-bio-builtin-1, the resume-oriented format:
+
+<img style="" src="images/techfolio-bio-resume.png" class="img-responsive">
+
+Note that:
+
+  * The resume format starts with "Interests" and "Skills"
+  * No distinction is made between various kinds of publications.
+  * The resume ends with a references section.
+  * All types of awards are listed together.
+  
+Here is the same bio.json data presented using theme-bio-builtin-2, the CV-oriented format:
+
+<img style="" src="images/techfolio-bio-cv.png" class="img-responsive">
+
+Note that:
+
+  * "Interests", "Skills", and "References" are omitted
+  * Journal articles, conference publications, workshops, and technical reports get their own sections.
+  * Awards involving funding ("grants") are listed separately from other awards.
+
+
+
+
+<!--
 # 8. Adjust background colors
 
 <p style="text-align: center; padding-top: 10px">
