@@ -272,9 +272,12 @@ Note that:
   * "Interests", "Skills", and "References" are omitted
   * Journal articles, conference publications, workshops, and technical reports get their own sections.
   * Awards involving funding ("grants") are listed separately from other awards.
+  
+Finally, you can configure the label used on the home page to link to the bio page in `_config.yml`.  It defaults to "Resume", but if you prefer, you can change the displayed label to "CV". 
 
+To set the bio content, we recommend you start with either the template bio.json file (if you are a student and want a resume format) or [Philip Johnson's bio.json file](https://raw.githubusercontent.com/philipmjohnson/philipmjohnson.github.io/master/_data/bio.json) if you want a CV-style presentation. The latter file adds fields to various sections in order to support the CV format. 
 
-
+Once your bio.json file is set up correctly, you may want to adjust the theme so that the page renders exactly how you want it.  That will be covered later as part of the User Guide.
 
 <!--
 # 8. Adjust background colors
