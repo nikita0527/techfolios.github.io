@@ -13,7 +13,7 @@ Before proceeding, [login](http://github.com/login) to your GitHub account.
 
 # 2. Configure template
 
-In this step, you'll make a personal copy of the TechFolio template and configure it to be displayed as your portfolio. Here's a 3 minute video illustrating the following steps:
+In this step, you'll make a personal copy of the TechFolio template and configure it to be displayed as your portfolio. Please watch the following 3 minute video for an overview, then follow the steps below.
 
 {% include youtube.html id="KGrNQSZVcEc" %}
  
@@ -71,7 +71,7 @@ Note how the url in this screen image includes a personal GitHub account name.
 
 # 3. Set home page content
 
-It's all well and good to have your own portfolio site, but unless you actually happen to be Molly Maluhia, the next step is to replace the template content with your own.  Let's start with the home page.  Here's an 11 minute video illustrating the following steps:
+It's all well and good to have your own portfolio site, but unless you actually happen to be Molly Maluhia, the next step is to replace the template content with your own.  Let's start with the home page.  Please watch the following 11 minute video for an overview, then follow the steps below.
 
 {% include youtube.html id="kRNT7KYofGk" %}
 
@@ -95,7 +95,7 @@ Now refresh your profile page to see your home page, and continue editing bio.js
 
 # 4. Set home page theme
 
-Now that your home page content is OK, it's possible to explore TechFolio "themes". (If you're content with the current theme, you can skip this section for now.) Here's a three minute video illustrated the steps below:
+Now that your home page content is OK, it's possible to explore TechFolio "themes". (If you're content with the current theme, you can skip this section for now.) Please watch the following 3 minute video for an overview, then follow the steps below.
 
 {% include youtube.html id="us00EnBKUYc" %}
 
@@ -132,7 +132,9 @@ Here is an example of the home page after setting the home page to the third bui
 
 # 5. Set project content
 
-An important part of any technology portfolio are descriptions of significant projects you've developed or played a significant role in. 
+An important part of any technology portfolio are descriptions of significant projects you've developed or played a significant role in. Please skim the text in this section for an overview, then watch the following 8 minute video to see an example, then update your project descriptions, referring back to this documentation as necessary. 
+
+{% include youtube.html id="z5PbK0B1FlE" %}
 
 In TechFolios, use the projects/ directory to hold a file for each of your projects.  The template comes with three sample projects in the projects/ directory named project-1.md, project-2.md, and project-3.md.  Here is the template projects top-level page, which provides a summary of all your projects:
 
@@ -183,14 +185,68 @@ Fifth, as illustrated above, each project summary contains a link to a page with
     
   2. *Provide details via a link to the project's home page.*  Some projects might have their own home page, such as a GitHub repo, which is the authoritative source for project details.  In this case, it might be most appropriate for your project summary to link directly to that home page rather than you writing a redundant description in the \*.md file.  To support this, you can provide a field called `projecturl:` in the front matter of the \*.md file whose value is the URL to the external site.  If this field is present, it is used as the link on the project summary page. See the video for examples of this approach. 
     
- 
- 
 
+Here is an example of the projects page after the content was set as in the video above:
+ 
+<img style="" src="images/techfolio-philip-projects-configured.png" class="img-responsive">
+
+# 6. Set projects page theme
+
+Exactly similar to the home page, you can edit the `_config.yml` page to specify the theme for the project summary page.  If you like, spend a minute or two now to check out an alternative layout for project summaries. 
+
+# 7. Set essay content
+
+Since TechFolio is built on Jekyll, it provides excellent infrastructure for "blogging". However, we will use the more professional term "technical essay". 
+
+Essays are similar to projects in the following ways:
+ 
+   * Each essay is stored in its own \*.md file.
+   * It does not matter what the file name is, as long as it ends with ".md".
+   * Just as the system identifies a project through the `type: project` field in a file's front matter, the system identifies essays through `type: essay` in a file's front matter.
+   
+Essays are different from projects in the following ways:
+  
+   * The essay contents must be provided following the front matter.  An essay summary cannot link to an external site for more information (such as is possible with the `projecturl:` field).
+   * The summary description of an essay is automatically generated from the first 40 words in the essay. You do not put a summary in the front matter.
+   * Images are not required for essays.
+   * Essays must have a date field (YYYY-MM-DD) in the front matter section. This field is used to list the essay summaries in reverse chronological order.
+   
+Here is an essay file from the template site to give you an idea of its structure:
+ 
+```markdown
+---
+layout: essay
+type: essay
+published: true
+title: Igniting the fire
+date: 2015-08-26
+labels:
+  - Software Engineering
+  - Learning
+---
+
+Ever since I first grasped a paintbrush, I’ve always been eager to learn about design. Design is such a complex concept. For example, when looking at abstract art, its meaning can be completely different for different people. It motivates a person to think thoughtfully and has the potential to submerge them in a sea of imagination. It’s that special relationship between the viewer and the art that makes something as technical as software engineering interesting to me.
+
+I never used to think that design and technology went hand in hand.  Thus, learning about software engineering and the role of design has been incredibly interesting to me. Design, implementation, and management are just some of the many things I wish to learn more about. Good art, in a way, makes a person question it. They become joined in the idea of visualization – where captivation meets inspiration.
+
+I am now starting to take a Software Engineering class. I hope to learn a lot through the course, but I know it will be just the beginning of my journey. By the time I’m done with it, I hope I’ve learned enough to take the next step in my life as a developer. But until then, my fire will keep on burning.
+
+```
+    
+   
+
+   
 
 <!--
-# 5. Set essay content
 
-# 6. Set bio content
+# 8. Set essays page theme
+
+Exactly similar to the home and projects pages, you can edit the `_config.yml` page to specify the theme for the essays page.  If you like, spend a minute or two now to check out an alternative layout. 
+
+
+# 8. Set bio content
+
+# 8. Adjust background colors
 
 <p style="text-align: center; padding-top: 10px">
   <a href="/userguide.html" class="btn btn-primary btn-md" role="button">Go to User Guide <span class="glyphicon glyphicon-chevron-right"></span> </a>
