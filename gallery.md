@@ -37,7 +37,7 @@ title: Gallery
 <h2>Philip Johnson</h2>
 <div class="row">
   <div class="col-sm-6">
-    <img src="images/techfolio-pj-home-page.png" class="img-responsive">
+    <img src="images/techfolio-pj-gallery.png" class="img-responsive">
   </div>
   <div class="col-sm-6">
    <p style="margin-top: 20px">
