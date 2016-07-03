@@ -85,6 +85,11 @@ For the `basics` section, when editing the picture field, be sure to delete the 
  
 For the `profiles` section, I recommend you include only your "professional" networking sites. For example, you might not want to include facebook if you use that only for personal networking.  You can specify any networking site for which there exists a [Semantic UI brand icon](http://semantic-ui.com/elements/icon.html#brands).
 
+<div class="alert alert-warning">
+<p><strong>Warning!</strong> A user has reported that AdBlock prevents the display of the LinkedIn icon. If this (or other) icon(s) do not appear and you have installed AdBlock in your browser, temporarily disable it and see if that fixes the problem.
+</p>
+</div>
+
 For the 'interests' section, you can include keywords for each interest or leave that field empty.  On the home page, keywords associated with interests do not appear with the built-in templates, but they are used on the resume page.
 
 Once you've finished your edits, click "Commit changes" at the bottom of the page to save.
@@ -173,7 +178,7 @@ You can learn more at the [UH Micromouse Website](http://www-ee.eng.hawaii.edu/~
 
 First, note the file contents begin with [Jekyll front matter](https://jekyllrb.com/docs/frontmatter/), which is enclosed between three dashes.  The Jekyll front matter provides all of the information needed to generate the project summary: the project name, summary text, labels, the image file, the date, and the permalink (which becomes the URL to the detailed description). 
 
-Second, note that your project file names should end with ".md".  This indicates to the system that the contents of the file are in [GitHub flavored markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/). For the most part, the template files provide examples of the required syntax and you might not even need to refer to the documentation.
+Second, note that your project file names should end with ".md".  This indicates to the system that the contents of the file are in [GitHub flavored markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/). For the most part, the template files provide examples of the required syntax and you might not even need to refer to the documentation. You might also find GitHub's [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) to be helpful if you do not have prior experience with this format.
 
 Third, you must provide a square image of at least 300px on a side for each project. We recommend you upload those project images to the images/ directory, just like you uploaded your home page image. The template system provides examples.
   
