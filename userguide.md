@@ -3,14 +3,16 @@ layout: userguide
 title: User Guide
 ---
 
+<p style="padding-top: 20px">This User Guide provides tips on how to increase your effectiveness at building and maintaining your portfolio after mastering the directions in the QuickStart.</p>
+
 # 1. Develop locally
 
 The [QuickStart page](/quickstart.html) shows you how to create and edit your portfolio "in the cloud" using only a browser. While this is a simple way to get started, there are some advantages to developing your portfolio locally:
 
-  * You can use your favorite text editor or IDE for writing (Emacs, Eclipse, IntelliJ Idea, etc.). Note: not Microsoft Word! 
+  * You can use your favorite text editor or IDE for writing (Emacs, Eclipse, IntelliJ Idea, etc.). Note: do not use Microsoft Word! 
   * After installing Jekyll, you can build and review the site instantly on your computer after making changes. 
   
-There are two components to developing your techfolio locally: (1) managing a local copy of your techfolio repo, and (2) running Jekyll locally to build your site.  
+There are two components to developing your techfolio locally: (1) managing a local copy of your portfolio repo, and (2) running Jekyll locally to build your site.  
 
 ### Manage your portfolio files locally
 
@@ -44,8 +46,32 @@ jekyll serve --baseurl ''
 
 Third, open a browser and go to [http://localhost:4000](http://localhost:4000).  You should see the home page of your site. 
 
-
-
 # 2. Getting updates
+
+When you fork the TechFolio [template repository](https://github.com/techfolios/template) while following the QuickStart, you create your own "snapshot" of that template code.  However, the template code will occasionally be updated with new themes or other improvements. Major improvements to the template will be publicized in the [News Page](/news.html), so you can check there occasionally to see if there are updates to the template. 
+
+To incorporate an updated template into your own portfolio, you have to create a copy of your GitHub repo on your local computer, merge the updated template repo into your local copy of your portfolio, then push your updated local copy back to GitHub. 
+    
+More specifically:
+
+First, follow the instructions in [Manage your portfolio files locally](/userguide.html#Manageyourportfoliofileslocally) to obtain a local copy of your portfolio files on your computer.
+
+Second, open a command shell, and cd into your portfolio directory. 
+
+Third, execute the following commmands:
+
+```sh
+% git fetch techfolios
+% git merge techfolios master
+% git push origin master
+```
+
+For more details on this process, consult [Syncing a fork on GitHub](https://help.github.com/articles/syncing-a-fork/). Note that the template repository will already be set as an upstream repository with the name "techfolios". You can see this by executing the following command:
+
+```sh
+% git remote -v
+```
+
+In rare cases, the merge command will indicate conflicts. In this case, you will need to resolve the conflicts, commit your changed files, and then push the results.  See the [Help](/help.html) page if you need assistance. 
 
 # 3. Anatomy of bio.json
