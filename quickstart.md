@@ -98,6 +98,11 @@ Now refresh your profile page to see your home page, and continue editing bio.js
 
 <img style="" src="images/techfolio-pj-home-page.png" class="img-responsive">
 
+<div class="alert alert-warning">
+<p><strong>Note:</strong> If your site does display your updates to bio.json within 30 seconds of committing, it is likely that there is a syntax error in your bio.json file.  See <a href="userguide.html#3.Anatomyofbio.json">Anatomy of bio.json</a> for information on the structure of bio.json and how to diagnose and resolve these kinds of errors.
+</p>
+</div>
+
 # 4. Set home page theme
 
 Now that your home page content is OK, it's possible to explore TechFolio "themes". (If you're content with the current theme, you can skip this section for now.) Please watch the following 3 minute video for an overview, then follow the steps below.
