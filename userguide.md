@@ -36,7 +36,7 @@ Once you understand the basics of git and its implementation in GitHub, you no l
 
 Once you are able to manage a local copy of your portfolio files on your computer, you can now install Jekyll so that you can build and review your site without committing to GitHub. 
  
-First, follow the [Jekyll installation instructions](https://jekyllrb.com/docs/installation/).
+First, follow the [Jekyll installation instructions](https://jekyllrb.com/docs/installation/). Note: TechFolios requires at least Version 3 of Jekyll.
 
 Second, open a shell window, cd into your portfolio directory, and run the following command:
 
