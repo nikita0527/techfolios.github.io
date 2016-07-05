@@ -295,6 +295,20 @@ Let's say you forgot a comma when editing your social network entries. Here's wh
 
 YAML Lint will indicate an error and the top-level section in which the error occurred ("profiles"). It won't always tell you the exact line but hopefully the error message will give you enough information to track down the error.
 
+### 3.4 Miscellaneous syntax tips
+
+Here are a few things we've discovered and added while developing our portfolios:
+
+  * You cannot comment out lines in your bio.json file.  It is fine to have empty arrays, for example. But if there is actual data that you do not want displayed, then you have to delete it.
+  
+  * As noted above, the JSON Resume schema requires dates in the form YYYY-MM-DD, and the validator will flag the use of "Present" as an error. However, some of the TechFolio templates support the use of "Present" as an endDate field.
+  
+  * The JSON Resume schema does not require an "author" field. That's totally lame. Fortunately, you can add fields to bio.json without violating the schema. So, TechFolios expects you to provide an "author" field in the publications object.
+  
+  * The bio-publications-2.html template checks for publication types "journal", "conference", "workshop", "techreport", and "thesis" in order to better support CV-style resumes.  For an example of use, see the publications field in [Philip Johnson's bio.json](https://github.com/philipmjohnson/philipmjohnson.github.io/blob/master/_data/bio.json).
+  
+  * The bio-publications-2.html template also checks for an award with type "grant" and creates a special section for those awards. For an example of use, see the awards field in [Philip Johnson's bio.json](https://github.com/philipmjohnson/philipmjohnson.github.io/blob/master/_data/bio.json).
+
 Once your bio.json file passes both JSON Schema and YAML Lint, it should build without problem in TechFolio.
 
 # 4. Custom design tips
