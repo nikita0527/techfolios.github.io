@@ -295,9 +295,9 @@ Let's say you forgot a comma when editing your social network entries. Here's wh
 
 YAML Lint will indicate an error and the top-level section in which the error occurred ("profiles"). It won't always tell you the exact line but hopefully the error message will give you enough information to track down the error.
 
-### 3.4 Miscellaneous syntax tips
+### 3.4 Miscellaneous bio.json tips
 
-Here are a few things we've discovered and added while developing our portfolios:
+Here are a few things we've discovered about bio.json while developing our portfolios:
 
   * You cannot comment out lines in your bio.json file.  It is fine to have empty arrays, for example. But if there is actual data that you do not want displayed, then you have to delete it.
   
@@ -309,6 +309,10 @@ Here are a few things we've discovered and added while developing our portfolios
   
   * The bio-publications-2.html template also checks for an award with type "grant" and creates a special section for those awards. For an example of use, see the awards field in [Philip Johnson's bio.json](https://github.com/philipmjohnson/philipmjohnson.github.io/blob/master/_data/bio.json).
 
+  * If you want to transmogrify your bio.json file into other formats, see [Hack My Resume](http://please.hackmyresume.com/).
+  
+  * For heaven's sake, don't end up with a portfolio like [this one](https://medium.com/@_oren/every-single-web-portfolio-site-ever-8fad53534d46#.o82m6ejrr).
+  
 Once your bio.json file passes both JSON Schema and YAML Lint, it should build without problem in TechFolio.
 
 # 4. Custom design tips
