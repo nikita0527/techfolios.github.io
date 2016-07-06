@@ -315,21 +315,31 @@ Here are a few things we've discovered about bio.json while developing our portf
   
 Once your bio.json file passes both JSON Schema and YAML Lint, it should build without problem in TechFolio.
 
-# 4. Custom design tips
+# 4. Missing pages
+
+The template techfolio comes with default handling when users request an URL not associated with the site (i.e. 404 errors). The default response (see the top-level [404.md](https://github.com/techfolios/template/blob/master/404.md) file and the [missingpage.html template](https://github.com/techfolios/template/blob/master/_layouts/missingpage.html)) is to indicate that the URL was not found and provide a list of links to all projects and essays. For example:
+ 
+<img style="" src="images/techfolio-missing-page.png" class="img-responsive">
+
+This is helpful if you are transitioning to TechFolio from another professional portfolio site and worry that others might have bookmarked URLs that will no longer point correctly to your updated essay and project pages. 
+
+If you prefer to handle 404 errors in a different way, the best way is to create a copy of the missingpage.html layout file (such as missingpage-pj.html) and then edit the front matter in 404.md to point to your new missingpage-pj layout.  Then edit missingpage-pj.html to provide whatever information you wish to the user. 
+
+# 5. Custom design tips
 
 If you want to create your own custom themes, you need to become familiar with two facilities: Jekyll templates and Semantic UI.
 
-### 4.1 Jekyll Templates
+### 5.1 Jekyll Templates
 
 TechFolio is based on [Jekyll](https://jekyllrb.com/).  Each of the pages are built using [Jekyll Templates](https://jekyllrb.com/docs/templates/), which in turn are based on the [Liquid Template Language](https://github.com/Shopify/liquid/wiki).
 
 We recommend that when defining a new theme, make a copy of an existing, working theme, and then start modifying it. Use the above links as reference when you want to do something where there is no existing sample code illustrating how to accomplish it.
 
-### 4.2 Semantic UI
+### 5.2 Semantic UI
 
 TechFolio uses [Semantic UI](http://semantic-ui.com/) as its CSS framework.  See the Semantic UI documentation for details on this framework. Currently TechFolio uses Version 2.1.
 
-### 4.3 Hack the bio.json format
+### 5.3 Hack the bio.json format
 
 It is possible to add fields to bio.json without violating the schema.  In some cases, the easiest way to implement your vision for your portfolio is by first extending the bio.json format in a backward compatible manner, then creating a custom theme that looks for these additional fields.
  
