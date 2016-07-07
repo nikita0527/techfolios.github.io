@@ -54,7 +54,23 @@ To incorporate an updated template into your own portfolio, you have to create a
 
 First, follow the instructions in [Manage your portfolio files locally](/userguide.html#Manageyourportfoliofileslocally) to obtain a local copy of your portfolio files on your computer.
 
-Second, open a command shell, and cd into your portfolio directory. You will execute `git fetch techfolios` to obtain the techfolio template updates, `git merge techfolios/master -m "Merge techfolio template into master."` to integrate them into your local portfolio files, and `git push origin master` to push your newly updated portfolio files back to GitHub. Here's a sample session illustrating what it should look like:
+Second, you need to ensure that the template repo is "upstream" of your repository.  You can see this by executing the `git remote -v` command, which should show two remotes called "techfolios". Open a command shell, cd to your portfolio directory, and execute the command. You should see something like this:
+                                                                                     
+```sh
+$ git remote -v
+origin	https://github.com/philipmjohnson/philipmjohnson.github.io.git (fetch)
+origin	https://github.com/philipmjohnson/philipmjohnson.github.io.git (push)
+techfolios	https://github.com/techfolios/template.git (fetch)
+techfolios	https://github.com/techfolios/template.git (push)
+```
+If you only see the "origin" remotes, then you need to add techfolios as a remote. To do this, execute the following:
+
+```sh
+$ git remote add techfolios https://github.com/techfolios/template.git
+```
+Now re-run the `git remote -v` command to verify that you have the techfolios remote set up.
+
+Third, open a command shell, and cd into your portfolio directory. You will execute `git fetch techfolios` to obtain the techfolio template updates, `git merge techfolios/master -m "Merge techfolio template into master."` to integrate them into your local portfolio files, and `git push origin master` to push your newly updated portfolio files back to GitHub. Here's a sample session illustrating what it should look like:
 
 ```sh
 [~/philipmjohnson.github.io]-> git fetch techfolios
@@ -81,15 +97,7 @@ To https://github.com/philipmjohnson/philipmjohnson.github.io.git
    1656f1f..5a3bba7  master -> master
 ```
 
-For more details on this process, consult [Syncing a fork on GitHub](https://help.github.com/articles/syncing-a-fork/). Note that the template repository will already be set as an upstream repository with the name "techfolios". You can see this by executing the `git remote -v` command:
-
-```sh
-[~/philipmjohnson.github.io]-> git remote -v
-origin	https://github.com/philipmjohnson/philipmjohnson.github.io.git (fetch)
-origin	https://github.com/philipmjohnson/philipmjohnson.github.io.git (push)
-techfolios	https://github.com/techfolios/template.git (fetch)
-techfolios	https://github.com/techfolios/template.git (push)
-```
+For more details on this process, consult [Syncing a fork on GitHub](https://help.github.com/articles/syncing-a-fork/). Note that the template repository will already be set as an upstream repository with the name "techfolios". 
 
 In rare cases, the merge command will indicate conflicts. In this case, you will need to resolve the conflicts, commit your changed files, and then push the results.  See the [Help](/help.html) page if you need assistance. 
 
