@@ -69,6 +69,11 @@ Go to the bottom of the page and click "Commit changes" to save these changes.
 
 Note how the url in this screen image includes a personal GitHub account name.
 
+<div class="alert alert-warning">
+<p><strong>Note:</strong> The template is still in development, and might look slightly different from the screen shots shown in this Quick Start. We will periodically update this guide to reflect the latest appearance of the template.
+</p>
+</div>
+
 # 3. Set home page content
 
 It's all well and good to have your own portfolio site, but unless you actually happen to be Molly Maluhia, the next step is to replace the template content with your own.  Let's start with the home page.  Please watch the following 11 minute video for an overview, then follow the steps below.
