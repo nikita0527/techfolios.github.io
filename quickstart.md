@@ -165,7 +165,6 @@ Here's the contents of the project-1.md file used to generate both the project s
 ---
 layout: project
 type: project
-published: true
 image: images/micromouse.jpg
 title: Micromouse
 permalink: projects/micromouse
@@ -235,7 +234,6 @@ Here is an essay file from the template site to give you an idea of its structur
 ---
 layout: essay
 type: essay
-published: true
 title: Igniting the fire
 date: 2015-08-26
 labels:
