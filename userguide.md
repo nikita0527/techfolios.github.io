@@ -352,12 +352,108 @@ labels:
 
 This essay will not appear in the list of essays on your Essays page, but it can be retrieved if you know the URL (in this case, it's mostly likely essays/2015-08-26.html). 
 
+# 7. Formatting
 
-# 6. Custom design tips
+Creating attractive project and essay pages requires basic understanding of GitHub Flavored Markdown (for text) and Semantic UI (for images). Fortunately, it's not complicated.
+
+### 7.1 Format text
+
+To format text, use Markdown. For example, to create an H1 header, use `#`.  To italicize a word, surround it with `*`. To create a link, start by enclosing the link label in `[]` and follow it with the URL in `()`.  Here are some examples:
+
+```
+# Section 1
+## Section 1.1
+
+I think TechFolios is *awesome*.
+
+Here is a link to [TechFolios](http://techfolios.github.io).
+```
+
+GitHub provides excellent documentation on the Markdown formatting available in [basic writing and formatting syntax](https://help.github.com/articles/basic-writing-and-formatting-syntax/), including boldface, quotes, lists, code blocks, and so forth. 
+
+### 7.2 Format images
+
+You can insert images using the plain old `<img>` HTML tag, but you can control the formatting of your images much better if you take advantage of the [Semantic UI image classes](http://semantic-ui.com/elements/image.html). 
+
+The example Molly Maluhia portfolio provides examples of the most common kinds of image formatting.
+
+#### Float an image
+
+The [Vacay Project Page](https://techfolios.github.io/template/projects/vacay) illustrates how to float an image to the left side of the text. Here is the code used to produce that image:
+
+```
+<img class="ui medium right floated rounded image" src="../images/vacay-home-page.png">
+```
+
+Note that this example not only floats the image to the right, but also sets the size to medium and rounds the corners.
+
+#### Icon images
+
+The [Vacay Project Page](https://techfolios.github.io/template/projects/vacay) also illustates the display of an icon, in this case, the GitHub icon in the link at the bottom of the page.  Here is the code used to produce that:
+ 
+```
+<a href="https://github.com/theVacay/vacay"><i class="large github icon"></i>theVacay/vacay</a>
+```
+
+For a complete list of available icons, see the [Semantic UI Icon Documentation](http://semantic-ui.com/elements/icon.html).
+
+#### Grouped images
+
+The [Micromouse Project Page](http://techfolios.github.io/template/projects/micromouse) illustrates a simple way to provide a group of images with similar formatting. In this case, all the images have the same size and rounded corners. Here's the code that produced that format:
+
+```
+<div class="ui small rounded images">
+  <img class="ui image" src="../images/micromouse-robot.png">
+  <img class="ui image" src="../images/micromouse-robot-2.jpg">
+  <img class="ui image" src="../images/micromouse.jpg">
+  <img class="ui image" src="../images/micromouse-circuit.png">
+</div>
+```
+
+### Circular images
+
+In some situations, circular images provide a nice design element for your page.  
+
+**Important note: To create circular images, the source image must be square!!**  If your source image is not square, then the resulting "circular" image will actually be an oval. 
+  
+I also recommend that if you want circular images, make sure the source image has a non-white background color. Otherwise, the circular nature of the image will be lost. 
+
+The [Igniting the fire essay](http://techfolios.github.io/template/essays/2015-08-26.html) provides three examples of circular images. Here's an abbreviated version of the essay's markdown illustrating how the circular images were inserted and floated:
+
+```
+<img class="ui tiny left circular floated image" src="../images/paintbrushes.jpg">
+
+Ever since I first grasped a paintbrush...
+
+<img class="ui tiny left circular floated image" src="../images/design-technology.jpg">
+
+I never used to think that design and technology...
+
+<img class="ui tiny left circular floated image" src="../images/software-code.jpg">
+
+I am now starting to take a Software Engineering class...
+```
+
+### Locating image files
+
+In the Molly Maluhia portfolio, I create a directory called images/ that holds all the image files.  Then, every project and essay can refer to an image through a relative link (i.e. `src="../images/the-image.png"`).  This is not mandatory; you can put images whereever you want, but I find an images/ directory to be helpful for organization.
+
+
+
+
+
+
+
+
+
+
+
+
+# 7. Custom theme design
 
 If you want to create your own custom themes, you need to become familiar with two facilities: Jekyll templates and Semantic UI.
 
-### 6.1 Jekyll Templates
+### 7.1 Jekyll Templates
 
 TechFolio is based on [Jekyll](https://jekyllrb.com/).  Each of the pages are built using [Jekyll Templates](https://jekyllrb.com/docs/templates/), which in turn are based on the [Liquid Template Language](https://github.com/Shopify/liquid/wiki).
 
