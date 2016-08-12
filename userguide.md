@@ -379,7 +379,7 @@ The example Molly Maluhia portfolio provides examples of the most common kinds o
 
 #### Float an image
 
-The [Vacay Project Page](https://techfolios.github.io/template/projects/vacay) illustrates how to float an image to the left side of the text. Here is the code used to produce that image:
+The [Vacay Project Page](https://techfolios.github.io/template/projects/vacay) illustrates how to float an image to the right side of the text. Here is the code used to produce that image:
 
 ```
 <img class="ui medium right floated rounded image" src="../images/vacay-home-page.png">
