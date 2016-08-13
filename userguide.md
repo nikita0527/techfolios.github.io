@@ -99,7 +99,34 @@ To https://github.com/philipmjohnson/philipmjohnson.github.io.git
 
 For more details on this process, consult [Syncing a fork on GitHub](https://help.github.com/articles/syncing-a-fork/). Note that the template repository will already be set as an upstream repository with the name "techfolios". 
 
-In rare cases, the merge command will indicate conflicts. In this case, you will need to resolve the conflicts, commit your changed files, and then push the results.  See the [Help](/help.html) page if you need assistance. 
+### Dealing with git merge errors
+
+In some cases, the merge command will result in one or more "CONFLICT"s. In this case, you will need to resolve the conflicts, commit your changed files, and then push the results.  
+
+For example, let's say there were updates to Molly Maluhia's project or essay files. Since you deleted those files in your portfolio, when you try to merge you will get one or more messages like this:
+
+```
+CONFLICT (modify/delete): projects/project-3.md deleted in HEAD and modified in techfolios/master. Version techfolios/master of projects/project-3.md left in tree.
+```
+
+In this case, the right thing to do is to delete this file from the tree using this command:
+
+```
+$ git rm projects/project-3.md
+```
+
+Git will issue a warning that the file "needs merge"; you can ignore it.
+
+Once you have removed all the files, you must commit your fixes using the following:
+
+```
+$ git commit -m "fixed merge conflicts"
+```
+
+Now you are ready to invoke the "git push origin master" command as documented above.
+
+
+See the [Help](/help.html) page if you need assistance. 
 
 # 3. Anatomy of bio.json
 
@@ -442,6 +469,8 @@ In the Molly Maluhia portfolio, I create a directory called images/ that holds a
 
 
 
+ 
+
 
 
 
@@ -459,11 +488,11 @@ TechFolio is based on [Jekyll](https://jekyllrb.com/).  Each of the pages are bu
 
 We recommend that when defining a new theme, make a copy of an existing, working theme, and then start modifying it. Use the above links as reference when you want to do something where there is no existing sample code illustrating how to accomplish it.
 
-### 6.2 Semantic UI
+### 7.2 Semantic UI
 
 TechFolio uses [Semantic UI](http://semantic-ui.com/) as its CSS framework.  See the Semantic UI documentation for details on this framework. Currently TechFolio uses Version 2.1.
 
-### 6.3 Hack the bio.json format
+### 7.3 Hack the bio.json format
 
 It is possible to add fields to bio.json without violating the schema.  In some cases, the easiest way to implement your vision for your portfolio is by first extending the bio.json format in a backward compatible manner, then creating a custom theme that looks for these additional fields.
  
