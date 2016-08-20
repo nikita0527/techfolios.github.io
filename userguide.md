@@ -400,13 +400,9 @@ GitHub provides excellent documentation on the Markdown formatting available in 
 
 ### 7.2 Format images
 
-You can insert images using the plain old `<img>` HTML tag, but you can control the formatting of your images much better if you take advantage of the [Semantic UI image classes](http://semantic-ui.com/elements/image.html). 
+You can insert images using the plain old `<img>` HTML tag, but you can control the formatting of your images much better if you take advantage of the [Semantic UI image classes](http://semantic-ui.com/elements/image.html). The example Molly Maluhia portfolio provides examples of the most common kinds of image formatting.
 
-The example Molly Maluhia portfolio provides examples of the most common kinds of image formatting.
-
-#### Float an image
-
-The [Vacay Project Page](https://techfolios.github.io/template/projects/vacay) illustrates how to float an image to the right side of the text. Here is the code used to produce that image:
+**Float an image.** The [Vacay Project Page](https://techfolios.github.io/template/projects/vacay) illustrates how to float an image to the right side of the text. Here is the code used to produce that image:
 
 ```
 <img class="ui medium right floated rounded image" src="../images/vacay-home-page.png">
@@ -414,9 +410,7 @@ The [Vacay Project Page](https://techfolios.github.io/template/projects/vacay) i
 
 Note that this example not only floats the image to the right, but also sets the size to medium and rounds the corners.
 
-#### Icon images
-
-The [Vacay Project Page](https://techfolios.github.io/template/projects/vacay) also illustates the display of an icon, in this case, the GitHub icon in the link at the bottom of the page.  Here is the code used to produce that:
+**Icon images.** The [Vacay Project Page](https://techfolios.github.io/template/projects/vacay) also illustates the display of an icon, in this case, the GitHub icon in the link at the bottom of the page.  Here is the code used to produce that:
  
 ```
 <a href="https://github.com/theVacay/vacay"><i class="large github icon"></i>theVacay/vacay</a>
@@ -424,9 +418,7 @@ The [Vacay Project Page](https://techfolios.github.io/template/projects/vacay) a
 
 For a complete list of available icons, see the [Semantic UI Icon Documentation](http://semantic-ui.com/elements/icon.html).
 
-#### Grouped images
-
-The [Micromouse Project Page](http://techfolios.github.io/template/projects/micromouse) illustrates a simple way to provide a group of images with similar formatting. In this case, all the images have the same size and rounded corners. Here's the code that produced that format:
+**Groups of images.** The [Micromouse Project Page](http://techfolios.github.io/template/projects/micromouse) illustrates a simple way to provide a group of images with similar formatting. In this case, all the images have the same size and rounded corners. Here's the code that produced that format:
 
 ```
 <div class="ui small rounded images">
@@ -437,9 +429,7 @@ The [Micromouse Project Page](http://techfolios.github.io/template/projects/micr
 </div>
 ```
 
-### Circular images
-
-In some situations, circular images provide a nice design element for your page.  
+**Circular images.** In some situations, circular images provide a nice design element for your page.  
 
 **Important note: To create circular images, the source image must be square!!**  If your source image is not square, then the resulting "circular" image will actually be an oval. 
   
@@ -461,9 +451,22 @@ I never used to think that design and technology...
 I am now starting to take a Software Engineering class...
 ```
 
-### Locating image files
+### 7.3 Locating image files
 
 In the Molly Maluhia portfolio, I create a directory called images/ that holds all the image files.  Then, every project and essay can refer to an image through a relative link (i.e. `src="../images/the-image.png"`).  This is not mandatory; you can put images whereever you want, but I find an images/ directory to be helpful for organization.
+
+### 7.4 Format video
+
+The [Hackystat Project Page](http://philipmjohnson.org/projects/hackystat) illustrates an embedded video. Here is how that YouTube video is embedded in that page: 
+
+```
+<div class="ui embed" data-source="youtube" data-id="NrLFIpm0wps" >
+</div>
+```
+
+To learn how to embed other kinds of media, see the [Semantic UI embed documentation](http://semantic-ui.com/modules/embed.html). 
+
+
 
 
 
