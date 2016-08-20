@@ -451,9 +451,7 @@ I never used to think that design and technology...
 I am now starting to take a Software Engineering class...
 ```
 
-### 7.3 Locating image files
-
-In the Molly Maluhia portfolio, a top-level images/ directory holds all the image files.  Every project and essay can thus refer to an image through a relative link (i.e. `src="../images/the-image.png"`).  This is not mandatory; you can put images whereever you want, but I find an images/ directory to be helpful for organization.
+**Location of image files.**  In the Molly Maluhia portfolio, a top-level images/ directory holds all the image files.  Every project and essay can thus refer to an image through a relative link (i.e. `src="../images/the-image.png"`).  This is not mandatory; you can put images whereever you want, but I find an images/ directory to be helpful for organization.
 
 ### 7.4 Format video
 
