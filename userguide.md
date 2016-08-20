@@ -431,7 +431,7 @@ For a complete list of available icons, see the [Semantic UI Icon Documentation]
 
 **Circular images.** In some situations, circular images provide a nice design element for your page.  
 
-**Important note: To create circular images, the source image must be square!!**  If your source image is not square, then the resulting "circular" image will actually be an oval. 
+*Important note: To create circular images, the source image must be square!!* If your source image is not square, then the resulting "circular" image will actually be an oval. 
   
 I also recommend that if you want circular images, make sure the source image has a non-white background color. Otherwise, the circular nature of the image will be lost. 
 
@@ -453,7 +453,7 @@ I am now starting to take a Software Engineering class...
 
 ### 7.3 Locating image files
 
-In the Molly Maluhia portfolio, I create a directory called images/ that holds all the image files.  Then, every project and essay can refer to an image through a relative link (i.e. `src="../images/the-image.png"`).  This is not mandatory; you can put images whereever you want, but I find an images/ directory to be helpful for organization.
+In the Molly Maluhia portfolio, a top-level images/ directory holds all the image files.  Every project and essay can thus refer to an image through a relative link (i.e. `src="../images/the-image.png"`).  This is not mandatory; you can put images whereever you want, but I find an images/ directory to be helpful for organization.
 
 ### 7.4 Format video
 
