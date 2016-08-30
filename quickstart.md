@@ -9,7 +9,9 @@ To get started with TechFolios, all you need is an account at GitHub. You don't 
 
 If you haven't already, [sign up for GitHub](https://help.github.com/articles/signing-up-for-a-new-github-account) and [verify your email address](https://help.github.com/articles/verifying-your-email-address/). Choose your username wisely, as that will become part of the URL to your portfolio site.  
 
-**Username recommendations:** Keep your username professional and close to your real name: "the3Gr8est" might seem super clever to you right now, but will be awkward and embarrassing to you during an interview next year. Restrict yourself to lowercase characters, numbers, and hyphens to make it simple to remember. Uppercase adds unnecessary confusion.  It is easy to [change your GitHub username](https://help.github.com/articles/changing-your-github-username/) to something more professional.
+**Username recommendations:** Keep your username professional and close to your real name: "the3Gr8est" might seem super clever to you right now, but will be awkward and embarrassing to you during an interview next year. Restrict yourself to lowercase characters, numbers, and hyphens to make it simple to remember. Uppercase adds unnecessary confusion.  Don't make your username location-specific: "philip-at-manoa" will be confounding if you move next year to San Francisco.
+
+If you decide your username isn't as good as it could be, it is very easy to [change your GitHub username](https://help.github.com/articles/changing-your-github-username/) to something more professional. 
 
 Before proceeding, [login](http://github.com/login) to your GitHub account.
 
