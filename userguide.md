@@ -519,7 +519,7 @@ In projects and essays, the date: field should be a valid date (either YYYY or Y
 
 ```
 date: 2016
-``
+```
 
 ### 9.2 permalinks
 
