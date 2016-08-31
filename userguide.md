@@ -466,38 +466,69 @@ To learn how to embed other kinds of media, see the [Semantic UI embed documenta
 
 
 
-
-
-
-
- 
-
-
-
-
-
-
-
-
-# 7. Custom theme design
+# 8. Custom theme design
 
 If you want to create your own custom themes, you need to become familiar with two facilities: Jekyll templates and Semantic UI.
 
-### 7.1 Jekyll Templates
+### 8.1 Jekyll Templates
 
 TechFolio is based on [Jekyll](https://jekyllrb.com/).  Each of the pages are built using [Jekyll Templates](https://jekyllrb.com/docs/templates/), which in turn are based on the [Liquid Template Language](https://github.com/Shopify/liquid/wiki).
 
 We recommend that when defining a new theme, make a copy of an existing, working theme, and then start modifying it. Use the above links as reference when you want to do something where there is no existing sample code illustrating how to accomplish it.
 
-### 7.2 Semantic UI
+### 8.2 Semantic UI
 
 TechFolio uses [Semantic UI](http://semantic-ui.com/) as its CSS framework.  See the Semantic UI documentation for details on this framework. Currently TechFolio uses Version 2.1.
 
-### 7.3 Hack the bio.json format
+### 8.3 Hack the bio.json format
 
 It is possible to add fields to bio.json without violating the schema.  In some cases, the easiest way to implement your vision for your portfolio is by first extending the bio.json format in a backward compatible manner, then creating a custom theme that looks for these additional fields.
  
 An example of this approach is [Philip Johnson's CV page](https://philipmjohnson.github.io/bio/).  This page provides separate sections for various forms of publications (i.e. journals, conferences, etc.) as well as a separate section listing awards that are grants.  To implement this approach, [Philip's bio.json](https://github.com/philipmjohnson/philipmjohnson.github.io/blob/master/_data/bio.json) extends the default bio.json format with additional fields, and then the [bio-publications-2.html](https://github.com/techfolios/template/blob/master/_includes/bio-publications-2.html) template checks for those fields when laying out the page. 
 
 You can do the same thing. Just make sure you don't make changes that break either the [JSON Schema Validator](http://www.jsonschemavalidator.net/) or [YAML Lint](http://www.yamllint.com/). 
+
+# 9. Debugging
+
+The easiest way to debug your site is to build it locally (rather than edit the files in a browser at GitHub).  
+
+For example, when you build the site locally, Jekyll will provide useful debugging error messages such as this one:
+
+```
+[~/github/ics-software-engineering/foo.github.io]-> jekyll serve --baseurl ''
+Configuration file: /Users/philipjohnson/github/ics-software-engineering/foo.github.io/_config.yml
+            Source: /Users/philipjohnson/github/ics-software-engineering/foo.github.io
+       Destination: /Users/philipjohnson/github/ics-software-engineering/foo.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+  Liquid Exception: The URL /http:/situationunknown.com/ is invalid because it contains a colon. in /_layouts/essays.html
+             ERROR: YOUR SITE COULD NOT BE BUILT:
+                    ------------------------------------
+                    The URL /http:/situationunknown.com/ is invalid because it contains a colon.`
+```
+
+When you are editing files in a browser window at GitHub, you might only receive a cryptic message such as "Build failed" without any accompanying information about why the build failed.
+
+Or, you may not get any message at all, but find that your site simply does not update.   This is because a failed build means that the old HTML files will not be updated. 
+
+Based upon issues encountered by developers, here are some of the common problems:
+
+### 9.1 date field
+
+In projects and essays, the date: field should be a valid date (either YYYY or YYYY-MM-DD) format. For example:
+
+```
+date: 2016
+``
+
+### 9.2 permalinks
+
+The "permalink" field can be used to provide a better URL for a project page. If you don't supply a permalink, then the file name (with a .html rather than .md extension) will be used. Permalinks should be all lower case and provide the path to the projects section.  For example, a valid permalink might look like this:
+
+```
+permalink: projects/hackystat
+``
+
+Don't supply an actual URL as the permalink (i.e. "http://foo.bar/"). 
+
 
