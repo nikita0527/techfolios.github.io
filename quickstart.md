@@ -267,7 +267,7 @@ The last section of the site to personalize is the "bio" page.  The bio page ren
 
 TechFolio calls this a bio page because academic technologists provide biographical data in the form of a "CV", while industry-oriented technologists provide biographical data as a "Resume".  The distinction is deeper than just the term: the structure and content of a CV is actually quite different from that of a resume. 
 
-TechFolio tries to support the presentation of biographical data in either CV or Resume format through the use of themes.  The "theme-bio-builtin-1" theme creates a bio page that presents the data in bio.json in a style typical of a resume. The "theme-bio-builtin-2" also presents the data in bio.json, but this time in a style typical of a resume. *We expect that many users will want to create custom themes based on one of these two starting points in order to best present their biographical data.*
+TechFolio tries to support the presentation of biographical data in either CV or Resume format through the use of themes.  The "theme-bio-builtin-1" theme creates a bio page that presents the data in bio.json in a style typical of a resume. The "theme-bio-builtin-2" also presents the data in bio.json, but this time in a style typical of a CV. *We expect that many users will want to create custom themes based on one of these two starting points in order to best present their biographical data.*
 
 A concrete example will help the differences in these two approaches clear.  Here is a sample bio.json file presented using theme-bio-builtin-1, the resume-oriented format:
 
