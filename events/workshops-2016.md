@@ -45,6 +45,10 @@ This final session is for hackers who want to customize their professional portf
 
 Come with your vision of what you want to implement into your professional portfolio and we will help you get started making it happen. If your hack is cool, we'd love to include it in a future release of TechFolios.
 
+### Questions?
+
+Please contact Philip Johnson (johnson@hawaii.edu)
+
 
 
 
