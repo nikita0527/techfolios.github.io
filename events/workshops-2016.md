@@ -18,7 +18,9 @@ If you are graduating this academic year and have not yet created a professional
  
 *Wednesday, November 2, 2016. 4:30-5:30pm, POST 318B (ICSpace).*  
 
-During the first workshop, we will very quickly overview the elements of a high quality professional portfolio, and then guide you through the [Quick Start Tutorial](../quickstart.html) to implement your professional portfolio using TechFolios.
+During the first workshop, we will very quickly overview the elements of a high quality professional portfolio, and then guide you through the [Quick Start Tutorial](../quickstart.html) to implement your professional portfolio using TechFolios. 
+
+Be sure to bring your laptop to this session!  This workshop is not a "lecture": you will spend the hour actually building your portfolio using your laptop under our supervision.
 
 In addition, a professional photographer has agreed to attend and take headshots free of charge. 
 
@@ -35,6 +37,8 @@ The goal of this session is to provide detailed review of your portfolio, and br
  
 This session will be of particular use to students early in their degree program. In addition to assessing ways to improve your current portfolio, we will discuss ways you can leverage your future semesters so that you have an awesome professional portfolio by the time you graduate. 
 
+Be sure to bring your laptop to this session!  This workshop is not a "lecture": you will spend the hour actually reviewing and improving your portfolio using your laptop under our supervision.
+
 ### Workshop 3: TechFolio Internals Hacking 
 
 *Wednesday, November 16, 2016. 4:30-5:30pm, POST 318B (ICSpace).* 
@@ -44,6 +48,8 @@ Do you like TechFolios, but want to distinguish yourself with a totally custom l
 This final session is for hackers who want to customize their professional portfolio by implementing new themes, Jekyll plugins, Javascript modules, or Semantic UI widgets. 
 
 Come with your vision of what you want to implement into your professional portfolio and we will help you get started making it happen. If your hack is cool, we'd love to include it in a future release of TechFolios.
+
+Be sure to bring your laptop to this session!  You will spend the hour actually hacking TechFolio templates using your laptop under our supervision.
 
 ### Questions?
 
