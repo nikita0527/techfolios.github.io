@@ -108,7 +108,7 @@ Now refresh your profile page to see your home page, and continue editing bio.js
 <img style="" src="images/techfolio-pj-home-page.png" class="img-responsive">
 
 <div class="alert alert-warning">
-<p><strong>Note:</strong> If your site does display your updates to bio.json within 30 seconds of committing, it is likely that there is a syntax error in your bio.json file.  See <a href="userguide.html#3.Anatomyofbio.json">Anatomy of bio.json</a> for information on the structure of bio.json and how to diagnose and resolve these kinds of errors.
+<p><strong>Note:</strong> If your site does display your updates to bio.json within 30 seconds of committing, it is likely that there is a syntax error in your bio.json file.  See <a href="userguide.html#9.Debugging">User Guide: Debugging</a> for information on diagnose and resolve errors in your techfolio setup.
 </p>
 </div>
 

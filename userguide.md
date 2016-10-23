@@ -490,28 +490,13 @@ You can do the same thing. Just make sure you don't make changes that break eith
 
 # 9. Debugging
 
-The easiest way to debug your site is to build it locally (rather than edit the files in a browser at GitHub).  
+If your site does not display at all, or does not publish your updates within a minute or so, then it is likely that you have introduced an error in your TechFolio setup.  To find out, go to your TechFolio GitHub repository in your browser and click on the Settings link, then scroll down to the "GitHub Pages" section.  If there was an error building your site, GitHub will sometimes indicate it there. Here is an example of an error due to a missing comma in my bio.json file:
 
-For example, when you build the site locally, Jekyll will provide useful debugging error messages such as this one:
+<img style="" src="images/techfolio-build-error.png" class="img-responsive">
 
-```
-[~/github/ics-software-engineering/foo.github.io]-> jekyll serve --baseurl ''
-Configuration file: /Users/philipjohnson/github/ics-software-engineering/foo.github.io/_config.yml
-            Source: /Users/philipjohnson/github/ics-software-engineering/foo.github.io
-       Destination: /Users/philipjohnson/github/ics-software-engineering/foo.github.io/_site
- Incremental build: disabled. Enable with --incremental
-      Generating... 
-  Liquid Exception: The URL /http:/situationunknown.com/ is invalid because it contains a colon. in /_layouts/essays.html
-             ERROR: YOUR SITE COULD NOT BE BUILT:
-                    ------------------------------------
-                    The URL /http:/situationunknown.com/ is invalid because it contains a colon.`
-```
+Other times, GitHub does not indicate an error, and instead your project or essay simply fails to appear in your site. In this case, the best way to determine the error is to run your site locally. You can either [install Jekyll](https://jekyllrb.com/) and build your site locally, or else ask someone who has Jekyll running locally to build your site and let you know the error.  
 
-When you are editing files in a browser window at GitHub, you might only receive a cryptic message such as "Build failed" without any accompanying information about why the build failed.
-
-Or, you may not get any message at all, but find that your site simply does not update.   This is because a failed build means that the old HTML files will not be updated. 
-
-Based upon issues encountered by developers, here are some of the common problems:
+Based upon issues encountered by TechFolio users so far, here are some of the most common problems:
 
 ### 9.1 date field
 
@@ -527,8 +512,36 @@ The "permalink" field can be used to provide a better URL for a project page. If
 
 ```
 permalink: projects/hackystat
-``
+```
 
 Don't supply an actual URL as the permalink (i.e. "http://foo.bar/"). 
 
+### 9.3 Title contains a ':' or a ','
+
+If your title field contains punctuation and is not in quotation marks, then Jekyll will fail to build the page. Here's an example:
+
+```
+title: Kukui Cup: The Semantic UI Version
+```
+
+When running Jekyll locally, this page produces the following error:
+
+```
+[~/github/philipmjohnson/philipmjohnson.github.io]-> jekyll serve --baseurl ''
+Configuration file: /Users/philipjohnson/github/philipmjohnson/philipmjohnson.github.io/_config.yml
+            Source: /Users/philipjohnson/github/philipmjohnson/philipmjohnson.github.io
+       Destination: /Users/philipjohnson/github/philipmjohnson/philipmjohnson.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+Error reading file /Users/philipjohnson/github/philipmjohnson/philipmjohnson.github.io/projects/kukuicup.md: (<unknown>): mapping values are not allowed in this context at line 6 column 17 
+                    done in 0.783 seconds.
+```
+
+Unfortunately, GitHub does not report this type of error in the Settings page.
+
+To fix this error, just put your title in quotes:
+
+```
+title: "Kukui Cup: The Semantic UI Version"
+```
 
