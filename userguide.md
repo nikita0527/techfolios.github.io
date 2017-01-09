@@ -395,6 +395,7 @@ I think TechFolios is *awesome*.
 
 Here is a link to [TechFolios](http://techfolios.github.io).
 ```
+**Note that you must put a space between the # header character(s) and the title text!**  
 
 GitHub provides excellent documentation on the Markdown formatting available in [basic writing and formatting syntax](https://help.github.com/articles/basic-writing-and-formatting-syntax/), including boldface, quotes, lists, code blocks, and so forth. 
 
