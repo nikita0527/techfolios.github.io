@@ -501,10 +501,10 @@ Based upon issues encountered by TechFolio users so far, here are some of the mo
 
 ### 9.1 date field
 
-In projects and essays, the date: field should be a valid date (either YYYY or YYYY-MM-DD) format. For example:
+In projects and essays, the date: field should be a valid date (in YYYY-MM-DD) format. For example:
 
 ```
-date: 2016
+date: 2016-01-02
 ```
 
 ### 9.2 permalinks
@@ -546,3 +546,16 @@ To fix this error, just put your title in quotes:
 title: "Kukui Cup: The Semantic UI Version"
 ```
 
+### 9.4 No space between field name and field value
+
+You must have a space between the field name and its value. This is illegal:
+
+```
+title:Foo
+```
+
+This is correct:
+
+```
+title: Foo
+```
