@@ -172,7 +172,7 @@ type: project
 image: images/micromouse.jpg
 title: Micromouse
 permalink: projects/micromouse
-date: 2015
+date: 2015-07-01
 labels:
   - Robotics
   - Arduino
