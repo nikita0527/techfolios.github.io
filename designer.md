@@ -153,9 +153,11 @@ Again, you are limited to three work entries.
 
 The Simple Bio Editor gets some of its simplicity by limiting your choices. For example, you can't list more than three networks.  In the event that you want to go beyond what is available with the Simple Bio Editor, you can use the "regular" bio.json editor, which you can invoke by selecting "bio.json" from the Bio menu. The following window appears when I select this item:
 
-(Bio.json editor window should appear here).
+<img style="" width="800px" src="images/designer/bio-json-editor.png" class="img-responsive">
 
 Using this editor, you can now make any changes you like, but you must be careful to adhere to JSON syntax.
+
+Note that once you edit the file, an "*" appears next to the file name in the title bar indicating that the buffer has been changed. To write out the file, use control-s on Windows and Unix, and command-s on Macintosh.
 
 ### 3.3.3 Publishing your changes
 
