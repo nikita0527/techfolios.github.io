@@ -181,7 +181,7 @@ To publish your changes, select the "Push changes to GitHub" item from the Confi
 
 To edit your TechFolio projects, you use the Projects menu:
 
-<img style="" width="500px" src="images/designer/projects-menu.png" class="img-responsive">
+<img style="" width="250px" src="images/designer/projects-menu.png" class="img-responsive">
 
 The projects menu lists the file names for all projects in your TechFolio projects directory. It also provides a menu item for creating a new project from scratch. 
 
@@ -189,17 +189,17 @@ The projects menu lists the file names for all projects in your TechFolio projec
 
 First, let's select a pre-existing project, such as the project page I created for TechFolios itself. After selecting "techfolio.md", the following editor window appears:
 
-<img style="" width="500px" src="images/designer/project-editor.png" class="img-responsive">
+<img style="" width="800px" src="images/designer/project-editor.png" class="img-responsive">
 
 As soon as I start to edit the file contents, the editor indicates that the buffer is modified by putting a "*" in the title bar area:
 
-<img style="" width="500px" src="images/designer/project-editor-modified.png" class="img-responsive">
+<img style="" width="800px" src="images/designer/project-editor-modified.png" class="img-responsive">
 
 When I am finished, I can press "control-s" (Windows, Linux) or "commmand-s" (Macintosh) to save the buffer to its corresponding file. 
 
 If I now go to the Splash Window and select "Check Local Directory Status" from the Config menu, the system will report that the techfolio.md file has been modified:
 
-<img style="" width="500px" src="images/designer/project-editor-modified-splash.png" class="img-responsive">
+<img style="" width="800px" src="images/designer/project-editor-modified-splash.png" class="img-responsive">
 
 I could publish this change by selecting the "Push changes to GitHub" item from the Config menu. But first, let's look at creating a new project from scratch.
 
@@ -207,11 +207,11 @@ I could publish this change by selecting the "Push changes to GitHub" item from 
 
 To create a new project, select the "New Project" item from the Projects menu.  This brings up a dialog box where you can provide the name of the file in which you will describe the project:
 
-<img style="" width="500px" src="images/designer/new-project-dialog-box.png" class="img-responsive">
+<img style="" width="300px" src="images/designer/new-project-dialog-box.png" class="img-responsive">
 
 I will create a project to describe the TechFolio Designer, so I edit the file name to be techfoliodesigner.md and press OK. After that, the following window appears containing "template" text for a project:
 
-<img style="" width="500px" src="images/designer/new-project-template-text.png" class="img-responsive">
+<img style="" width="800px" src="images/designer/new-project-template-text.png" class="img-responsive">
 
 To make this a real project definition, I need to do the following:
 
@@ -221,7 +221,7 @@ To make this a real project definition, I need to do the following:
   
 When I've finished these changes, my new project definition looks like this:
 
-<img style="" width="500px" src="images/designer/new-project-completed.png" class="img-responsive">
+<img style="" width="800px" src="images/designer/new-project-completed.png" class="img-responsive">
 
 If I now run the "Check Local Directory Status" from the Config menu, the Splash window now indicates that a new file called techfoliodesigner.md has been created. (It also shows that techfolios.md has been modified, since I haven't pushed those changes to GitHub.)
 
@@ -229,11 +229,11 @@ If I now run the "Check Local Directory Status" from the Config menu, the Splash
 
 To publish the modification of techfolios.md and the creation of a new project, select "Push changes to GitHub" from the Config menu. Monitoring the Command Log window shows when the push starts, and when it completes. In this case, the push took about six seconds:
 
-<img style="" width="500px" src="images/designer/new-project-push-changes.png" class="img-responsive">
+<img style="" width="800px" src="images/designer/new-project-push-changes.png" class="img-responsive">
 
 If we now visit the projects page of my professional portfolio, you can see that the new project for TechFolio Designer is now available:
 
-<img style="" width="500px" src="images/designer/new-project-published-page.png" class="img-responsive">
+<img style="" width="800px" src="images/designer/new-project-published-page.png" class="img-responsive">
 
 ## 3.4 Editing Essays
 
@@ -241,17 +241,17 @@ Editing and creating essays occurs in exactly the same way as editing and creati
 
 To see all of your existing essays, and to create a new essay, pull down the Essays menu:
 
-<img style="" width="500px" src="images/designer/essays-menu.png" class="img-responsive">
+<img style="" width="250px" src="images/designer/essays-menu.png" class="img-responsive">
 
 Selecting an existing essay file name from the menu will create an editor for that essay. For example:
 
-<img style="" width="500px" src="images/designer/existing-essay-editor.png" class="img-responsive">
+<img style="" width="800px" src="images/designer/existing-essay-editor.png" class="img-responsive">
 
 After editing the essay, use "control-s" (Windows and Linux) or "command-s" (Macintosh) to save your changes to the file.
 
 To create a new essay, select "New Essay" from the Essays menu. After providing the name of the file in the dialog box, the following template essay will appear for editing:
 
-<img style="" width="500px" src="images/designer/new-essay-template.png" class="img-responsive">
+<img style="" width="800px" src="images/designer/new-essay-template.png" class="img-responsive">
 
 Write your essay, and save it out using "control-s" (Windows and Linux) or "command-s" (Macintosh).
 
