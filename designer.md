@@ -33,6 +33,10 @@ Before installing TFD, please verify that you have successfully installed git by
 
 <img style="" width="500px" src="images/designer/git-version.png" class="img-responsive">
 
+<div class="alert alert-warning">
+<p><strong>Note:</strong> Make sure you have installed Git version 2.18 or above on Windows.</p>
+</div>
+
 ## 2.2 Install TechFolio Designer
 
 After you have installed git, go to the [TechFolioDesigner Release Page](https://github.com/techfolios/techfoliodesigner/releases) and download a copy of the latest release appropriate for your platform. We strive to have releases for Windows, Macintosh, and Unix.
