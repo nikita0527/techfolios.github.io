@@ -566,3 +566,7 @@ This is correct:
 ```
 title: Foo
 ```
+
+### 9.5 Site doesn't update (tip 5): Check your bio.json
+
+Your site will not update if you have a syntax error in your bio.json file. To debug this, see the instructions in Section 3.3: Debugging bio.json.
