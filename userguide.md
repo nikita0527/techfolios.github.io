@@ -503,7 +503,7 @@ Sometimes you might find that when you are trying to get your portfolio up for t
 
 <img style="" src="images/molly-maluhia-gh-pages-build-problem.png" class="img-responsive">
 
-If your portfolio looks like the above, please go to the Settings page, scroll down to the GitHub Pages section, and if necessary change the source branch to "master" and click "Save".  You may have to commit another change to trigger a rebuild of the repo; I'm not sure whether or not that's necessary.
+If your portfolio looks like the above, please go to the Settings page, scroll down to the GitHub Pages section, and if necessary change the source branch from "gh-pages" to "master" and click "Save".  You may have to commit another change to trigger a rebuild of the repo; I'm not sure whether or not that's necessary.
 
 ### 9.1 Site doesn't update (tip 1): invalid date field
 
