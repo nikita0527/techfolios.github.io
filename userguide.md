@@ -495,9 +495,7 @@ If your site does not display at all, or does not publish your updates within a 
 
 <img style="" src="images/techfolio-build-error.png" class="img-responsive">
 
-Other times, GitHub does not indicate an error, and instead your project or essay simply fails to appear in your site. In this case, the best way to determine the error is to run your site locally. You can either [install Jekyll](https://jekyllrb.com/) and build your site locally, or else ask someone who has Jekyll running locally to build your site and let you know the error.  
-
-Based upon issues encountered by TechFolio users so far, here are some of the most common problems:
+Other times, GitHub does not indicate an error, and instead your project or essay simply fails to appear in your site. In this case, the following tips might help you figure out what to do:
 
 ### 9.1 Site doesn't display: Poorly formatted Molly Maluhia instead
 
@@ -570,3 +568,7 @@ title: Foo
 ### 9.5 Site doesn't update (tip 5): Check your bio.json
 
 Your site will not update if you have a syntax error in your bio.json file. To debug this, see the instructions in Section 3.3: Debugging bio.json.
+
+### 9.6 Install Jekyll locally
+
+If none of these tips help, the final way to determine the error is to run your site locally. You can either [install Jekyll](https://jekyllrb.com/) and build your site locally, or else ask someone who has Jekyll running locally to build your site and let you know the error.
