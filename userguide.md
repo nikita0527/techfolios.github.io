@@ -499,15 +499,33 @@ Other times, GitHub does not indicate an error, and instead your project or essa
 
 Based upon issues encountered by TechFolio users so far, here are some of the most common problems:
 
-### 9.1 date field
+### 9.1 Site doesn't display: Poorly formatted Molly Maluhia instead
 
-In projects and essays, the date: field should be a valid date (in YYYY-MM-DD) format. For example:
+Sometimes you might find that when you are trying to get your portfolio up for the first time, the page looks like this even through you've made changes to the config.yml and other files:
+
+<img style="" src="images/molly-maluhia-gh-pages-build-problem.png" class="img-responsive">
+
+If your portfolio looks like the above, please go to the Settings page, scroll down to the GitHub Pages section, and if necessary change the source branch to "master" and click "Save".  You may have to commit another change to trigger a rebuild of the repo; I'm not sure whether or not that's necessary.
+
+### 9.1 Site doesn't update (tip 1): invalid date field
+
+The all-time most popular reason for the build failing is an error in the date field. In projects and essays, the date field should be a valid date (in YYYY-MM-DD) format. For example:
 
 ```
-date: 2016-01-02
+date: 2016-01-01
 ```
 
-### 9.2 permalinks
+The following date fields will result in an error and your site will not update:
+
+```
+date: 2021-01
+date: Feb 2021
+date: 01-01-2021
+date: 2021-1-1
+```
+
+
+### 9.2 Site doesn't update (tip 2): permalinks
 
 The "permalink" field can be used to provide a better URL for a project page. If you don't supply a permalink, then the file name (with a .html rather than .md extension) will be used. Permalinks should be all lower case and provide the path to the projects section.  For example, a valid permalink might look like this:
 
@@ -515,9 +533,11 @@ The "permalink" field can be used to provide a better URL for a project page. If
 permalink: projects/hackystat
 ```
 
-Don't supply an actual URL as the permalink (i.e. "http://foo.bar/"). 
+Don't supply an actual URL as the permalink (i.e. "http://foo.bar/").
 
-### 9.3 Title contains a ':' or a ','
+Also, make sure you don't use the same permalink for two different projects or essays. That will make one unavailable.
+
+### 9.3 Site doesn't update (tip 3): Title contains a ':' or a ','
 
 If your title field contains punctuation and is not in quotation marks, then Jekyll will fail to build the page. Here's an example:
 
@@ -525,20 +545,7 @@ If your title field contains punctuation and is not in quotation marks, then Jek
 title: Kukui Cup: The Semantic UI Version
 ```
 
-When running Jekyll locally, this page produces the following error:
-
-```
-[~/github/philipmjohnson/philipmjohnson.github.io]-> jekyll serve --baseurl ''
-Configuration file: /Users/philipjohnson/github/philipmjohnson/philipmjohnson.github.io/_config.yml
-            Source: /Users/philipjohnson/github/philipmjohnson/philipmjohnson.github.io
-       Destination: /Users/philipjohnson/github/philipmjohnson/philipmjohnson.github.io/_site
- Incremental build: disabled. Enable with --incremental
-      Generating... 
-Error reading file /Users/philipjohnson/github/philipmjohnson/philipmjohnson.github.io/projects/kukuicup.md: (<unknown>): mapping values are not allowed in this context at line 6 column 17 
-                    done in 0.783 seconds.
-```
-
-Unfortunately, GitHub does not report this type of error in the Settings page.
+Notice that the title contains a ":".
 
 To fix this error, just put your title in quotes:
 
@@ -546,7 +553,7 @@ To fix this error, just put your title in quotes:
 title: "Kukui Cup: The Semantic UI Version"
 ```
 
-### 9.4 No space between field name and field value
+### 9.4 Site doesn't update (tip 4): No space between field name and field value
 
 You must have a space between the field name and its value. This is illegal:
 
